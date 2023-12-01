@@ -11,6 +11,7 @@ def parse_spelling(line: str) -> str:
             if line[i:].startswith(number):
                 output += str(index)
                 i += len(number) - 1
+                # the -1 is to account for overlapping letter
                 matches = True
                 break
         if not matches:
